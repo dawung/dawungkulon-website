@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website resmi Dusun Dawung Kulon, Desa Candi, Pacitan - Dokumentasi kegiatan, produk UMKM, dan informasi desa">
+  <title>Dusun Dawung Kulon - Desa Candi, Pacitan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header/Navbar -->
+  <header class="bg-green-800 text-white p-4 sticky top-0 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-tree text-2xl"></i>
+        <h1 class="text-xl md:text-2xl font-bold">Dusun Dawung Kulon</h1>
+      </div>
+      <nav class="mt-2 md:mt-0 flex flex-wrap justify-center gap-3 md:gap-6">
+        <a href="index.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-home mr-1"></i> Beranda
+        </a>
+        <a href="produk.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-store mr-1"></i> UMKM
+        </a>
+        <!-- <a href="galeri.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-images mr-1"></i> Galeri
+        </a> -->
+        <a href="kegiatan.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-calendar-alt mr-1"></i> Kegiatan
+        </a>
+        <a href="kontak.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-envelope mr-1"></i> Kontak
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-96 flex items-center justify-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/dusun.jpg')">
+    <div class="text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fadeIn">Selamat Datang di Dawung Kulon</h2>
+      <p class="text-xl text-white mb-6">Dusun yang asri di Desa Candi, Pacitan</p>
+      <a href="#tentang" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-flex items-center">
+        Jelajahi Dusun Kami <i class="fas fa-arrow-down ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+    <!-- Tentang Dusun -->
+    <section id="tentang" class="scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-green-800 mb-2">Tentang Dusun Dawung Kulon</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <p class="text-lg leading-relaxed">Dusun Dawung Kulon terletak di Desa Candi, Kecamatan Pringkuku, Kabupaten Pacitan, Jawa Timur. Dengan jumlah penduduk sekitar 120 jiwa dari 44 kepala keluarga, masyarakat Dawung Kulon hidup dengan harmonis di tengah alam yang asri.</p>
+          <p class="text-lg leading-relaxed">Mayoritas penduduk bekerja sebagai petani dan pengolah hasil bumi seperti krecek dan sapu. Hasil bumi dan kerajinan tangan menjadi sumber penghidupan utama warga.</p>
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            <div class="bg-green-100 p-4 rounded-lg text-center">
+              <i class="fas fa-users text-3xl text-green-700 mb-2"></i>
+              <p class="font-semibold">44 KK</p>
+              <p class="text-sm">Kepala Keluarga</p>
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg text-center">
+              <i class="fas fa-user-friends text-3xl text-green-700 mb-2"></i>
+              <p class="font-semibold">120 Jiwa</p>
+              <p class="text-sm">Total Penduduk</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="img/peta-dusun.png" alt="Peta Dusun Dawung Kulon" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Produk Unggulan -->
+    <section>
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-green-800 mb-2">Sekilas Tentang Produk </h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-center bg-green-50 p-8 rounded-xl">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold">Dukung Ekonomi Lokal</h3>
+          <p class="text-lg">Warga Dawung Kulon menghasilkan berbagai produk berkualitas seperti krecek, sapu, dan kerajinan tangan lainnya. Dengan membeli produk lokal, Anda turut membantu meningkatkan kesejahteraan masyarakat desa.</p>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <a href="produk.html" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300 inline-flex items-center">
+              Lihat Semua Produk <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="kontak.html" class="border-2 border-green-600 text-green-600 hover:bg-green-50 px-6 py-2 rounded-lg font-medium transition duration-300 inline-flex items-center">
+              Hubungi Kami <i class="fas fa-phone ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-md text-center">
+            <img src="img/krecek.jpeg" alt="Krecek" class="w-full h-32 object-cover rounded mb-3">
+            <h4 class="font-semibold">Krecek</h4>
+            <p class="text-sm text-gray-600">Olahan kulit sapi</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center">
+            <img src="img/sapulidi.jpeg" alt="Sapu" class="w-full h-32 object-cover rounded mb-3">
+            <h4 class="font-semibold">Sapu Lidi</h4>
+            <p class="text-sm text-gray-600">Kerajinan tangan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kegiatan Terbaru -->
+    <section>
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-green-800 mb-2">Kegiatan Terbaru</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="img/senam.jpg" alt="Senam Bersama" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <i class="fas fa-calendar-day mr-2"></i>
+              <span>7 Juli 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Senam Bersama</h3>
+            <p class="text-gray-600">Warga bersama dengan mahasiswa KKN melakukan senam agar menjaga tubuh tetap sehat</p>
+            <a href="kegiatan.html" class="inline-block mt-4 text-green-600 hover:text-green-800 font-medium">
+              Lihat Selengkapnya <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="img/sholawatan.jpg" alt="Sholawatan" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <i class="fas fa-calendar-day mr-2"></i>
+              <span>3 Juli 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Sholawatan</h3>
+            <p class="text-gray-600">Sholawat di rumah salah satu warga</p>
+            <a href="kegiatan.html" class="inline-block mt-4 text-green-600 hover:text-green-800 font-medium">
+              Lihat Selengkapnya <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="img/voli.jpg" alt="voli" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <i class="fas fa-calendar-day mr-2"></i>
+              <span>27 Juni 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Bermain Voli</h3>
+            <p class="text-gray-600">Muda-mudi yang bermain voli bersama di sore hari. Voli adalah olahraga yang paling populer di dawung kulon.</p>
+            <a href="kegiatan.html" class="inline-block mt-4 text-green-600 hover:text-green-800 font-medium">
+              Lihat Selengkapnya <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="kegiatan.html" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+          Lihat Semua Kegiatan <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="bg-green-50 rounded-xl p-8">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-green-800 mb-2">Potensi Unggulan Desa</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-leaf text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Pertanian Organik</h3>
+          <p class="text-gray-700">Ladang subur dengan sistem pertanian yang mumpuni sehingga menghasilkan berbagai hasil bumi yang berkualitas</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-utensils text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Kuliner Tradisional</h3>
+          <p class="text-gray-700">Berbagai makanan yang disajikan dengan pengolahan tradisional menjadi ciri khas tersendiri bagi dusun dawung kulon</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-hands-helping text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Tempat Wisata</h3>
+          <p class="text-gray-700">Dusun dawung kulon juga memiliki tempat-tempat indah yang belum diketahui publik sehingga bisa menjadi peluang bisnis bagi yang bersedia mengelola</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-tree mr-2"></i> Dawung Kulon
+          </h3>
+          <p class="text-green-200">Dusun yang asri di Kecamatan Candi, Kabupaten Pacitan, Jawa Timur.</p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-green-200 hover:text-white transition">Beranda</a></li>
+            <li><a href="produk.html" class="text-green-200 hover:text-white transition">Produk UMKM</a></li>
+            <!-- <li><a href="galeri.html" class="text-green-200 hover:text-white transition">Galeri Desa</a></li> -->
+            <li><a href="kegiatan.html" class="text-green-200 hover:text-white transition">Kegiatan</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontak Kami</h4>
+          <ul class="space-y-2 text-green-200">
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Desa Candi, Pacitan, Jawa Timur</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <span>dawungkulon@gmail.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span>+62 812 3456 7890</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-green-200 hover:text-white text-xl transition">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-green-200 hover:text-white text-xl transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-green-200 hover:text-white text-xl transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-green-200 hover:text-white text-xl transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+          <div class="mt-4">
+            <a href="https://maps.app.goo.gl/dQJNDRsnz7hC5aX3A" target="_blank" class="inline-flex items-center text-green-200 hover:text-white">
+              <i class="fas fa-map-marked-alt mr-2"></i> Lihat Peta
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-green-800 mt-8 pt-8 text-center text-green-300">
+        <p>&copy; 2025 Dusun Dawung Kulon. Dibuat dengan <i class="fas fa-heart text-red-400"></i> oleh Mahasiswa KKN.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
