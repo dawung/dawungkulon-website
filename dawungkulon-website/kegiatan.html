@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kegiatan Rutin Dusun Dawung Kulon - Desa Candi, Pacitan">
+  <title>Kegiatan - Dusun Dawung Kulon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header/Navbar -->
+  <header class="bg-green-800 text-white p-4 sticky top-0 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-tree text-2xl"></i>
+        <h1 class="text-xl md:text-2xl font-bold">Dusun Dawung Kulon</h1>
+      </div>
+      <nav class="mt-2 md:mt-0 flex flex-wrap justify-center gap-3 md:gap-6">
+        <a href="index.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-home mr-1"></i> Beranda
+        </a>
+        <a href="produk.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-store mr-1"></i> UMKM
+        </a>
+        <a href="kegiatan.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center bg-green-700">
+          <i class="fas fa-calendar-alt mr-1"></i> Kegiatan
+        </a>
+        <a href="kontak.html" class="px-2 py-1 rounded hover:bg-green-700 transition flex items-center">
+          <i class="fas fa-envelope mr-1"></i> Kontak
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12" x-data="kegiatan">
+    <!-- Hero Section -->
+    <section class="bg-green-700 text-white rounded-xl p-8 mb-12 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Kegiatan Dusun Dawung Kulon</h1>
+      <p class="text-lg max-w-2xl mx-auto">Dokumentasi berbagai kegiatan rutin dan acara khusus yang dilaksanakan di Dawung Kulon.</p>
+    </section>
+
+    <!-- Activities -->
+    <div class="space-y-8">
+      <!-- Tabs -->
+      <div class="flex flex-wrap border-b border-gray-200">
+        <button 
+          @click="activeTab = 'semua'"
+          :class="{'text-green-600 border-green-600': activeTab === 'semua'}"
+          class="px-4 py-2 font-medium border-b-2 border-transparent hover:text-green-600 transition"
+        >
+          Semua Kegiatan
+        </button>
+        <button 
+          @click="activeTab = 'rutin'"
+          :class="{'text-green-600 border-green-600': activeTab === 'rutin'}"
+          class="px-4 py-2 font-medium border-b-2 border-transparent hover:text-green-600 transition"
+        >
+          Rutin
+        </button>
+        <button 
+          @click="activeTab = 'acara'"
+          :class="{'text-green-600 border-green-600': activeTab === 'acara'}"
+          class="px-4 py-2 font-medium border-b-2 border-transparent hover:text-green-600 transition"
+        >
+          Acara Khusus
+        </button>
+      </div>
+
+      <!-- Activities List -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <template x-for="activity in filteredActivities" :key="activity.id">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+            <div class="relative h-48 overflow-hidden">
+              <img 
+                :src="activity.image" 
+                :alt="activity.title" 
+                class="w-full h-full object-cover transition duration-500 hover:scale-105"
+              >
+              <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">
+                <span x-text="activity.type === 'rutin' ? 'Rutin' : 'Acara Khusus'"></span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <i class="fas fa-calendar-day mr-2"></i>
+                <span x-text="activity.date"></span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2" x-text="activity.title"></h3>
+              <p class="text-gray-600 mb-4" x-text="activity.description"></p>
+              <!-- <a 
+                :href="activity.link" 
+                class="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
+              >
+                Lihat Dokumentasi <i class="fas fa-arrow-right ml-2"></i>
+              </a> -->
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>&copy; 2025 Dusun Dawung Kulon. Website oleh Mahasiswa KKN.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('kegiatan', () => ({
+        activeTab: 'semua',
+        activities: [
+          {
+            id: 1,
+            title: 'Sholawatan',
+            description: 'Berkumpul bersama di salah satu rumah warga untuk sholawatan',
+            date: 'Setiap Hari Kamis',
+            image: 'img/sholawatan.jpg',
+            type: 'rutin',
+            link: '#'
+          },
+          {
+            id: 2,
+            title: 'Voli',
+            description: 'Olahraga bola voli rutin dilakukan oleh anak-anak bahkan orang dewasa',
+            date: 'Setiap Hari Jika cuaca mendukung',
+            image: 'img/voli.jpg',
+            type: 'rutin',
+            link: '#'
+          },
+          {
+            id: 3,
+            title: 'Senam',
+            description: 'Senam bersama mahasiswa KKN yang dilakukan tiap hari sabtu',
+            date: 'setiap hari sabtu',
+            image: 'img/senam.jpg',
+            type: 'rutin',
+            link: '#'
+          },
+          {
+            id: 4,
+            title: 'Proker mahasiswa KKN',
+            description: 'turut meramaikan program kerja mahasiswa KKN yakni membuat sereh anti nyamuk',
+            date: '02 July 2025',
+            image: 'img/prokermahasiswa.jpg',
+            type: 'acara',
+            link: '#'
+          },
+          // {
+          //   id: 5,
+          //   title: 'Pengajian Rutin',
+          //   description: 'Kegiatan keagamaan yang dilaksanakan setiap minggu untuk warga dusun.',
+          //   date: 'Setiap Jumat Malam',
+          //   image: 'img/kegiatan/pengajian.jpg',
+          //   type: 'rutin',
+          //   link: '#'
+          // },
+          // {
+          //   id: 6,
+          //   title: 'Perayaan Hari Kemerdekaan',
+          //   description: 'Berbagai lomba dan acara menyambut hari kemerdekaan RI.',
+          //   date: '17 Agustus 2025',
+          //   image: 'img/kegiatan/17an.jpg',
+          //   type: 'acara',
+          //   link: '#'
+          // }
+        ],
+        get filteredActivities() {
+          if (this.activeTab === 'semua') {
+            return this.activities;
+          }
+          return this.activities.filter(activity => activity.type === this.activeTab);
+        }
+      }));
+    });
+  </script>
+</body>
+</html>
